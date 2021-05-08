@@ -6,36 +6,78 @@ public class NumberToWord {
         System.out.println("Enter number to read(0-1000):");
         int x = sc.nextInt();
         String readNum = "";
+        boolean check = true;
+        if (x%100==0) {
+            check = false;
+        }
         if (x < 0 || x >= 1000) {
             System.out.println("out of ability");
+        } else if (x == 0) {
+            System.out.println("The number 0 is read as zero");
         } else {
             switch (x / 100) {
                 case 1:
-                    readNum += "one hundred and ";
+                    if (check){
+                        readNum += "one hundreds and ";
+                    } else {
+                        readNum += "one hundreds";
+                    }
                     break;
                 case 2:
-                    readNum += "two hundred and ";
+                    if (check){
+                        readNum += "two hundreds and ";
+                    } else {
+                        readNum += "two hundreds";
+                    }
                     break;
                 case 3:
-                    readNum += "three hundred and ";
+                    if (check){
+                        readNum += "three hundreds and ";
+                    } else {
+                        readNum += "three hundreds";
+                    }
                     break;
                 case 4:
-                    readNum += "four hundred and ";
+                    if (check){
+                        readNum += "four hundreds and ";
+                    } else {
+                        readNum += "four hundreds";
+                    }
                     break;
                 case 5:
-                    readNum += "five hundred and ";
+                    if (check){
+                        readNum += "five hundreds and ";
+                    } else {
+                        readNum += "five hundreds";
+                    }
                     break;
                 case 6:
-                    readNum += "six hundred and ";
+                    if (check){
+                        readNum += "six hundreds and ";
+                    } else {
+                        readNum += "six hundreds";
+                    }
                     break;
                 case 7:
-                    readNum += "seven hundred and ";
+                    if (check){
+                        readNum += "seven hundreds and ";
+                    } else {
+                        readNum += "seven hundreds";
+                    }
                     break;
                 case 8:
-                    readNum += "eight hundred and ";
+                    if (check){
+                        readNum += "eight hundreds and ";
+                    } else {
+                        readNum += "eight hundreds";
+                    }
                     break;
                 case 9:
-                    readNum += "nine hundred and ";
+                    if (check){
+                        readNum += "nine hundreds and ";
+                    } else {
+                        readNum += "nine hundreds";
+                    }
                     break;
             }
             switch (x % 100 / 10) {
@@ -155,8 +197,6 @@ public class NumberToWord {
                 case 19:
                     readNum += "nineteen";
                     break;
-                default:
-                    readNum += "zero";
             }
             System.out.println("The number " + x + " is read as " + readNum);
         }
